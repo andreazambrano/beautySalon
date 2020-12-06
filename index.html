@@ -27,6 +27,7 @@
 
     <!-- nouislider CSS -->
     <link href="vendor/nouislider/nouislider.min.css" rel="stylesheet">
+    
 
     <!-- swiper CSS -->
     <link href="vendor/swiper/css/swiper.min.css" rel="stylesheet">
@@ -1701,7 +1702,7 @@ Home services</span>
     <script src="js/color-scheme-demo.js"></script>
 
     <!-- PWA app service registration and works -->
-    <script src="js/pwa-services.js"></script>
+    <!-- <script src="js/pwa-services.js"></script> -->
 
     <!-- page level custom script -->
     <script>
@@ -1709,34 +1710,34 @@ Home services</span>
         $(window).on('load', function() {
 
             /* range picker for filter */
-            var html5Slider = document.getElementById('rangeslider');
-            noUiSlider.create(html5Slider, {
-                start: [0, 100],
-                connect: true,
-                range: {
-                    'min': 0,
-                    'max': 500
-                }
-            });
+            // var html5Slider = document.getElementById('rangeslider');
+            // noUiSlider.create(html5Slider, {
+            //     start: [0, 100],
+            //     connect: true,
+            //     range: {
+            //         'min': 0,
+            //         'max': 500
+            //     }
+            // });
 
             var inputNumber = document.getElementById('input-number');
             var select = document.getElementById('input-select');
 
-            html5Slider.noUiSlider.on('update', function(values, handle) {
-                var value = values[handle];
+            // html5Slider.noUiSlider.on('update', function(values, handle) {
+            //     var value = values[handle];
 
-                if (handle) {
-                    inputNumber.value = value;
-                } else {
-                    select.value = Math.round(value);
-                }
-            });
-            select.addEventListener('change', function() {
-                html5Slider.noUiSlider.set([this.value, null]);
-            });
-            inputNumber.addEventListener('change', function() {
-                html5Slider.noUiSlider.set([null, this.value]);
-            });
+            //     if (handle) {
+            //         inputNumber.value = value;
+            //     } else {
+            //         select.value = Math.round(value);
+            //     }
+            // });
+            // select.addEventListener('change', function() {
+            //     html5Slider.noUiSlider.set([this.value, null]);
+            // });
+            // inputNumber.addEventListener('change', function() {
+            //     html5Slider.noUiSlider.set([null, this.value]);
+            // });
 
 
             /* carousel */
